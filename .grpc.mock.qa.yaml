@@ -1,0 +1,10 @@
+---
+fileVersion: v1
+serverName: Chat
+protoFile: "/GrpcWpfSample.Common/chat.proto"
+calls:
+- method: Subscribe
+  response:
+    body:
+      fromJsonFile: "/res.json"
+    status: OK

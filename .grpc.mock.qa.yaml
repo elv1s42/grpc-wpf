@@ -3,7 +3,7 @@ fileVersion: v1
 serverName: Chat
 protoFile: "/GrpcWpfSample.Common/chat.proto"
 calls:
-method Subscribe
+- method: Subscribe
   response:
     body:
       fromJsonFile: "/res.json"
@@ -12,4 +12,3 @@ method Subscribe
   request:
     body:
       fromJsonFile: "/req.json"
-    status: OK

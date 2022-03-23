@@ -1,0 +1,20 @@
+{
+  "id": "b93fbf09-5a53-46fb-ae91-33a9c4f71417",
+  "importStreams": [
+    {
+      "id": "0dc082a2-60be-49e4-a3db-13478adee5d5",
+      "name": "proto-file",
+      "importerName": "ProtoFile",
+      "createMissingOperations": true,
+      "options": {
+        "files": [
+          "../GrpcWpfSample.Common",
+          "../GrpcWpfSample.Common/chat.proto"
+        ],
+        "importPaths": []
+      }
+    }
+  ],
+  "authConfigs": [],
+  "certificates": []
+}

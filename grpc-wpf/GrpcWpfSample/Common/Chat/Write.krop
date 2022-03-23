@@ -1,0 +1,12 @@
+{
+  "details": {
+    "methodFqn": "GrpcWpfSample.Common.Chat.Write"
+  },
+  "requests": [
+    {
+      "location": "Write-request.json"
+    }
+  ],
+  "operationType": "unary",
+  "invokerName": "grpc"
+}

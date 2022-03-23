@@ -1,9 +1,12 @@
 ﻿using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
 using GrpcWpfSample.Common;
+//using Grpc.Net.Client;
+//using Grpc.Net.Client.Web;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Net.Http;
 using System.Threading.Tasks;
 
 namespace GrpcWpfSample.Client
@@ -14,32 +17,14 @@ namespace GrpcWpfSample.Client
 
         public ChatServiceClient()
         {
-            // Locate required files and set true to enable SSL
-            var secure = false;
+            //var httpClient = new HttpClient(new GrpcWebHandler(GrpcWebMode.GrpcWeb, new HttpClientHandler()));
+            //var channel = GrpcChannel.ForAddress("https://WeatherForecasts→blazor-2→elv1s42.mockqa.xyz", new GrpcChannelOptions { HttpClient = httpClient });
 
-            if (secure)
-            {
-                // create secure channel
-                var serverCACert = File.ReadAllText(@"C:\localhost_server.crt");
-                var clientCert = File.ReadAllText(@"C:\localhost_client.crt");
-                var clientKey = File.ReadAllText(@"C:\localhost_clientkey.pem");
-                var keyPair = new KeyCertificatePair(clientCert, clientKey);
-                var credentials = new SslCredentials(serverCACert, keyPair);
-
-                // Client authentication is an option. You can remove it as follows if you only need SSL.
-                //var credentials = new SslCredentials(serverCACert);
-
-                m_client = new Chat.ChatClient(
-                    new Channel("localhost", 50052, credentials));
-            }
-            else
-            {
-                // create insecure channel
-                m_client = new Chat.ChatClient(
-                    //new Channel("localhost", 50052, ChannelCredentials.Insecure));
-                    new Channel("Chat→grpc-wpf→elv1s42.mockqa.xyz", 443, ChannelCredentials.Insecure));
-                    //new Channel("xn--chatgrpc-wpfelv1s42-3h2lia.mockqa.xyz", 443, ChannelCredentials.Insecure));
-            }
+            // create insecure channel
+            m_client = new Chat.ChatClient(
+                //new Channel("localhost", 50052, ChannelCredentials.Insecure));
+                new Channel("Chat→grpc-wpf→elv1s42.mockqa.xyz", 443, ChannelCredentials.SecureSsl));
+                //new Channel("xn--chatgrpc-wpfelv1s42-3h2lia.mockqa.xyz", 443, ChannelCredentials.Insecure));
         }
 
         public async Task Write(ChatLog chatLog)

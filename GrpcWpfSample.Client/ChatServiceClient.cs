@@ -36,7 +36,9 @@ namespace GrpcWpfSample.Client
             {
                 // create insecure channel
                 m_client = new Chat.ChatClient(
-                    new Channel("localhost", 50052, ChannelCredentials.Insecure));
+                    //new Channel("localhost", 50052, ChannelCredentials.Insecure));
+                    new Channel("Chat→grpc-wpf→elv1s42.mockqa.xyz", 443, ChannelCredentials.Insecure));
+                    //new Channel("xn--chatgrpc-wpfelv1s42-3h2lia.mockqa.xyz", 443, ChannelCredentials.Insecure));
             }
         }
 

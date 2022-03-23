@@ -8,3 +8,8 @@ calls:
     body:
       fromJsonFile: "/res.json"
     status: OK
+- method: Write
+  request:
+    body:
+      fromJsonFile: "/req.json"
+    status: OK

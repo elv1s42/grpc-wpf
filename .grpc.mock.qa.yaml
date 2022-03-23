@@ -12,3 +12,5 @@ calls:
   request:
     body:
       fromJsonFile: "/req.json"
+  response:
+    status: OK

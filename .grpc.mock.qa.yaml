@@ -10,6 +10,6 @@ calls:
 - method: Write
   request:
     body:
-      fromJsonFile: "/req.json"
+      matchesJsonFile: "/req.json"
   response:
     status: OK

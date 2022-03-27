@@ -16,6 +16,6 @@ calls:
 - method: Write
   request:
     body:     
-      matchesJsonPath: "$[?(@.content=='hi mate')].content"
+      matchesJPath: "$[?(@.content=='hi mate')].content"
   response:
     status: OK

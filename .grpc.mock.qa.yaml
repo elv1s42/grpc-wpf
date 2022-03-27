@@ -12,12 +12,16 @@ calls:
     body:
       matchesJsonFile: "/req.json"
   response:
+    header:
+      writenum: 1
     status: OK
 - method: Write
   request:
     body:     
       matchesJPath: "[?($.content=='test j')]"
   response:
+    header:
+      writenum: 2
     status: OK
 - method: Write
   request:
@@ -27,6 +31,8 @@ calls:
         contains: "John"
       name: "Mike"
   response:
+    header:
+      writenum: 3
     status: OK
 - method: Write  
   response:

@@ -19,6 +19,13 @@ calls:
       matchesJPath: "$[?(@.content=='hi mate')].content"
   response:
     status: OK
+- method: Write
+  request:
+    body:     
+      content:
+        contains: "Hi!"
+  response:
+    status: OK
 - method: Write  
   response:
     status: NOT_FOUND

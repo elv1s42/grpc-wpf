@@ -13,3 +13,9 @@ calls:
       matchesJsonFile: "/req.json"
   response:
     status: OK
+- method: Write
+  request:
+    body:     
+        matchesJPath: "$.content=='Hi Mate!'"
+  response:
+    status: OK

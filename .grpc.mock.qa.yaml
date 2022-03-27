@@ -25,6 +25,7 @@ calls:
       content:
         startsWith: "Hi!"
         contains: "John"
+      name: "Mike"
   response:
     status: OK
 - method: Write  

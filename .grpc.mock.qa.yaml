@@ -23,7 +23,8 @@ calls:
   request:
     body:     
       content:
-        contains: "Hi!"
+        startsWith: "Hi!"
+        contains: "John"
   response:
     status: OK
 - method: Write  

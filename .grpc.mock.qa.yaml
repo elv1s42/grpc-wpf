@@ -37,3 +37,6 @@ calls:
 - method: Write  
   response:
     status: NOT_FOUND
+- method: GetUser  
+  response:
+    status: OK

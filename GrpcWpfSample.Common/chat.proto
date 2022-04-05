@@ -3,6 +3,7 @@ syntax = "proto3";
 // well known types
 import "google/protobuf/timestamp.proto";
 import "google/protobuf/empty.proto";
+import "google/protobuf/duration.proto";
 
 option csharp_namespace = "GrpcWpfSample.Common";
 
@@ -11,7 +12,10 @@ package GrpcWpfSample.Common;
 service Chat {
   rpc GetUser(google.protobuf.Empty) returns (User) {}
   rpc Write(ChatLog) returns (google.protobuf.Empty) {}
-  rpc Subscribe(google.protobuf.Empty) returns (stream ChatLog) {}  
+  rpc Subscribe(google.protobuf.Empty) returns (stream ChatLog) {}
+  rpc SayHello1(google.protobuf.Empty) returns (HelloReply);
+  rpc SayHello2(HelloRequest) returns (google.protobuf.Empty);
+  rpc SayHello3(HelloRequest) returns (HelloReply);
 }
 
 message User {
@@ -24,4 +28,81 @@ message ChatLog {
 	string name = 1;
 	string content = 2;
 	google.protobuf.Timestamp at = 3;
+}
+
+enum Corpus {
+    UNIVERSAL = 0;
+    WEB = 1;
+    IMAGES = 2;
+    LOCAL = 3;
+    NEWS = 4;
+    PRODUCTS = 5;
+    VIDEO = 6;
+  }
+
+message SampleMessage {
+  string stringField = 1;
+  repeated string stringArray = 2;
+}
+
+// The request message containing the user's name.
+message HelloRequest {
+  string name = 1;
+  /* */ double doubleField = 2;
+  float floatField = 3;
+  /* */ int32 int32Field = 4;
+  /* */ int64 int64Field = 5;
+  uint32 uint32Field = 6;
+  /* */ uint64 uint64Field = 7;
+  sint32 sint32Field = 8;
+  sint64 sint64Field = 9;
+  fixed32 fixed32Field = 10;
+  fixed64 fixed64Field = 11;
+  sfixed32 sfixed32Field = 12;
+  sfixed64 sfixed64Field = 13;
+  /* ! */ bool boolField = 14;
+  string stringField = 15;
+  /* ! */ bytes bytesField = 16; 
+  /* ! */ repeated string stringArray = 17; 
+  /* ! */ Corpus corpus = 18; 
+  /* ! */ map<string, string> mapField = 19; 
+  /* ! */ google.protobuf.Timestamp timestampField = 20; 
+  /* ! */ google.protobuf.Duration durationField = 21;
+  /* ! */ oneof test_oneof {
+    string nameOneOf = 22;
+    int32 idOneOf = 23;
+  }
+  SampleMessage sampleMessage = 24;
+  repeated SampleMessage sampleMessageArray = 25;
+}
+
+// The response message containing the greetings.
+message HelloReply {
+  string message = 1;
+  double doubleField = 2;
+  float floatField = 3;
+  int32 int32Field = 4;
+  int64 int64Field = 5;
+  uint32 uint32Field = 6;
+  uint64 uint64Field = 7;
+  sint32 sint32Field = 8;
+  sint64 sint64Field = 9;
+  fixed32 fixed32Field = 10;
+  fixed64 fixed64Field = 11;
+  sfixed32 sfixed32Field = 12;
+  sfixed64 sfixed64Field = 13;
+  bool boolField = 14;
+  string stringField = 15;
+  bytes bytesField = 16;
+  repeated string stringArray = 17;
+  Corpus corpus = 18;
+  map<string, string> mapField = 19;
+  google.protobuf.Timestamp timestampField = 20;
+  google.protobuf.Duration durationField = 21;
+  oneof test_oneof {
+    string nameOneOf = 22;
+    int32 idOneOf = 23;
+  }
+  SampleMessage sampleMessage = 24;
+  repeated SampleMessage sampleMessageArray = 25;
 }

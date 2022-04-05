@@ -1,0 +1,12 @@
+{
+  "details": {
+    "methodFqn": "GrpcWpfSample.Common.Chat.Subscribe"
+  },
+  "requests": [
+    {
+      "location": "Subscribe-request.json"
+    }
+  ],
+  "operationType": "serverStreaming",
+  "invokerName": "grpc"
+}

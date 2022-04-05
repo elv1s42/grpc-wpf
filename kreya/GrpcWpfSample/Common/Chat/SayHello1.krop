@@ -1,0 +1,12 @@
+{
+  "details": {
+    "methodFqn": "GrpcWpfSample.Common.Chat.SayHello1"
+  },
+  "requests": [
+    {
+      "location": "SayHello1-request.json"
+    }
+  ],
+  "operationType": "unary",
+  "invokerName": "grpc"
+}

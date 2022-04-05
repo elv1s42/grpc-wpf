@@ -97,7 +97,6 @@ message HelloReply {
   repeated string stringArray = 17;
   Corpus corpus = 18;
   map<string, string> mapField = 19;
-  google.protobuf.Timestamp timestampField = 20;
   google.protobuf.Duration durationField = 21;
   oneof test_oneof {
     string nameOneOf = 22;

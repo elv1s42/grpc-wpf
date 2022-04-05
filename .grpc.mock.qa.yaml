@@ -40,3 +40,6 @@ calls:
 - method: GetUser  
   response:
     status: OK
+- method: SayHello1  
+  response:
+    status: OK

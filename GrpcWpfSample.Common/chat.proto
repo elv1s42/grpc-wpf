@@ -9,8 +9,15 @@ option csharp_namespace = "GrpcWpfSample.Common";
 package GrpcWpfSample.Common;
 
 service Chat {
+  rpc GetUser(google.protobuf.Empty) returns (User) {}
   rpc Write(ChatLog) returns (google.protobuf.Empty) {}
-  rpc Subscribe(google.protobuf.Empty) returns (stream ChatLog) {}
+  rpc Subscribe(google.protobuf.Empty) returns (stream ChatLog) {}  
+}
+
+message User {
+	string name = 1;
+	string bio = 2;
+	string avatar = 3;
 }
 
 message ChatLog {

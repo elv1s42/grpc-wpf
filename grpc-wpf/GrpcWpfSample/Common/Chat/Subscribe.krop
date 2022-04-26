@@ -1,6 +1,12 @@
 {
   "details": {
-    "methodFqn": "GrpcWpfSample.Common.Chat.Subscribe"
+    "methodFqn": "GrpcWpfSample.Common.Chat.Subscribe",
+    "metadata": [
+      {
+        "key": "mock-qa-service",
+        "value": "cddocs/grpc-wpf/Chat"
+      }
+    ]
   },
   "requests": [
     {

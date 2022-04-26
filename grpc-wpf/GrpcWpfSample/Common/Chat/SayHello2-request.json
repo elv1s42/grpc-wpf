@@ -1,0 +1,52 @@
+{
+  "name": "{{ faker.name.last_name }}",
+  "doubleField": 1.23,
+  "floatField": 1.23,
+  "int32Field": 123,
+  "int64Field": "123",
+  "uint32Field": 123,
+  "uint64Field": "123",
+  "sint32Field": 123,
+  "sint64Field": "123",
+  "fixed32Field": 123,
+  "fixed64Field": "123",
+  "sfixed32Field": 123,
+  "sfixed64Field": "123",
+  "boolField": true,
+  "stringField": "fooBar",
+  "bytesField": "Zm9vQmFy",
+  "stringArray": [
+    "fooBar",
+    "fooBar"
+  ],
+  "corpus": "UNIVERSAL",
+  "mapField": {
+    "fooBar": "fooBar"
+  },
+  "timestampField": "1970-01-01T00:02:03.000000123Z",
+  "durationField": "123.000000123s",
+  "nameOneOf": "fooBar",
+  "sampleMessage": {
+    "stringField": "fooBar",
+    "stringArray": [
+      "fooBar",
+      "fooBar"
+    ]
+  },
+  "sampleMessageArray": [
+    {
+      "stringField": "fooBar",
+      "stringArray": [
+        "fooBar",
+        "fooBar"
+      ]
+    },
+    {
+      "stringField": "fooBar",
+      "stringArray": [
+        "fooBar",
+        "fooBar"
+      ]
+    }
+  ]
+}

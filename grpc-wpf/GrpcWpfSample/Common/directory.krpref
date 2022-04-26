@@ -3,7 +3,7 @@
     {
       "options": {
         "grpc": {
-          "endpoint": "https://Chat\u2192grpc-wpf\u2192elv1s42.mockqa.xyz",
+          "endpoint": "https://Chat\u2192grpc-wpf\u2192cddocs.mock.qa",
           "disableServerCertificateValidation": true
         }
       }

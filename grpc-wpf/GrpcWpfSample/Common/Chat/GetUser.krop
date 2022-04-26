@@ -1,0 +1,12 @@
+{
+  "details": {
+    "methodFqn": "GrpcWpfSample.Common.Chat.GetUser"
+  },
+  "requests": [
+    {
+      "location": "GetUser-request.json"
+    }
+  ],
+  "operationType": "unary",
+  "invokerName": "grpc"
+}

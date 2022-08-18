@@ -1,6 +1,6 @@
 ---
 fileVersion: v1
-serverName: Chat
+instanceName: Chat
 protoFile: "/GrpcWpfSample.Common/chat.proto"
 calls:
 - method: Subscribe

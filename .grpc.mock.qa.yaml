@@ -3,7 +3,7 @@ fileVersion: v1
 instanceName: Chat
 protoFile: "/GrpcWpfSample.Common/chat.proto"
 calls:
-- method: Subscribe
+- method: GrpcWpfSample.Common.Chat/Subscribe
   response:
     stream:
       fromJsonFile: "/res.json"

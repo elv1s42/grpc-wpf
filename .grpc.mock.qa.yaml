@@ -8,7 +8,7 @@ calls:
     stream:
       fromJsonFile: "/res.json"
     status: OK
-- method: Write
+- method: GrpcWpfSample.Common.Chat/Write
   request:
     body:
       matchesJsonFile: "/req.json"
@@ -16,7 +16,7 @@ calls:
     header:
       writenum: 1
     status: OK
-- method: Write
+- method: GrpcWpfSample.Common.Chat/Write
   request:
     body:     
       matchesJPath: "[?($.content=='test j')]"
@@ -24,7 +24,7 @@ calls:
     header:
       writenum: 2
     status: OK
-- method: Write
+- method: GrpcWpfSample.Common.Chat/Write
   request:
     body:     
       content:

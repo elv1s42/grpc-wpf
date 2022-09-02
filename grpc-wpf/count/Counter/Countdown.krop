@@ -1,0 +1,12 @@
+{
+  "details": {
+    "methodFqn": "count.Counter.Countdown"
+  },
+  "requests": [
+    {
+      "location": "Countdown-request.json"
+    }
+  ],
+  "operationType": "serverStreaming",
+  "invokerName": "grpc"
+}

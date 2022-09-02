@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+import "google/protobuf/empty.proto";
+
+package count;
+
+service Counter {
+  rpc IncrementCount (google.protobuf.Empty) returns (CounterReply);
+  rpc AccumulateCount (stream CounterRequest) returns (CounterReply);
+  rpc Countdown (google.protobuf.Empty) returns (stream CounterReply);
+}
+
+message CounterRequest {
+  int32 count = 1;
+}
+
+message CounterReply {
+  int32 count = 1;
+}

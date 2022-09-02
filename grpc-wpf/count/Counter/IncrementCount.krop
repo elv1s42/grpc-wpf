@@ -1,0 +1,12 @@
+{
+  "details": {
+    "methodFqn": "count.Counter.IncrementCount"
+  },
+  "requests": [
+    {
+      "location": "IncrementCount-request.json"
+    }
+  ],
+  "operationType": "unary",
+  "invokerName": "grpc"
+}

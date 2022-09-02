@@ -41,3 +41,39 @@ calls:
 - method: GrpcWpfSample.Common.Chat/GetUser  
   response:
     status: OK
+- method: GetUser  
+  response:
+    status: OK
+- method: GetUser2
+  response:
+    status: OK
+- method: GetUser3  
+  response:
+    status: OK
+- method: GetUser4  
+  response:
+    status: OK
+- method: GetUser5  
+  response:
+    status: OK
+- method: GetUser6  
+  response:
+    status: OK
+- method: GetUser6  
+  response:
+    status: OK
+- method: GetUser6  
+  response:
+    status: OK
+- method: GetUser6  
+  response:
+    status: OK
+- method: GetUser6  
+  response:
+    status: OK
+- method: GetUser6  
+  response:
+    status: OK
+- method: GetUser6  
+  response:
+    status: OK

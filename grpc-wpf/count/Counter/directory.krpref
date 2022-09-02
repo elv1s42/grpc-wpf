@@ -1,0 +1,16 @@
+{
+  "settings": [
+    {
+      "options": {
+        "grpc": {
+          "metadata": [
+            {
+              "key": "mock-qa-service",
+              "value": "cddocs/test/Counter"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

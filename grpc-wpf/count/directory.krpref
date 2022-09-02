@@ -1,0 +1,11 @@
+{
+  "settings": [
+    {
+      "options": {
+        "grpc": {
+          "endpoint": "https://Counter\u2192test\u2192cddocs.mockqa.xyz"
+        }
+      }
+    }
+  ]
+}

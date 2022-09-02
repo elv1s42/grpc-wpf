@@ -9,8 +9,7 @@
       "options": {
         "files": [
           "../GrpcWpfSample.Common",
-          "../GrpcWpfSample.Common/chat.proto",
-          "../GrpcWpfSample.Common/counter.proto"
+          "../GrpcWpfSample.Common/chat.proto"
         ],
         "importPaths": []
       }

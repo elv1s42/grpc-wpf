@@ -4,7 +4,7 @@
     "metadata": [
       {
         "key": "mock-qa-service",
-        "value": "cddocs/test/Chat"
+        "value": "cddocs/grpc-wpf/Chat"
       }
     ]
   },

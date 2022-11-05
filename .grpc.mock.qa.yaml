@@ -1,43 +1,25 @@
----
-fileVersion: v1
-instanceName: Chat
-protoFile: "/GrpcWpfSample.Common/chat.proto"
-calls:
-- method: GrpcWpfSample.Common.Chat/Subscribe
-  response:
-    stream:
-      fromJsonFile: "/res.json"
-    status: OK
-- method: GrpcWpfSample.Common.Chat/Write
-  request:
-    body:
-      matchesJsonFile: "/req.json"
-  response:
-    header:
-      writenum: 1
-    status: OK
-- method: GrpcWpfSample.Common.Chat/Write
-  request:
-    body:     
-      matchesJPath: "[?($.content=='test j')]"
-  response:
-    header:
-      writenum: 2
-    status: OK
-- method: GrpcWpfSample.Common.Chat/Write
-  request:
-    body:     
-      content:
-        startsWith: "Hi!"
-        contains: "John"
-      name: "Mike"
-  response:
-    header:
-      writenum: 3
-    status: OK
-- method: GrpcWpfSample.Common.Chat/Write  
-  response:
-    status: NOT_FOUND
-- method: GrpcWpfSample.Common.Chat/GetUser  
-  response:
-    status: OK
+- method: <string> # gRPC method name
+  request: # optional
+    header: # optional
+      <arbitrary-key>: <scalar> # same as equalsTo: <scalar>
+      <arbitrary-key>:
+        equalsTo: <scalar>
+        contains: <scalar>
+        startsWith: <scalar>
+        endsWith: <scalar>
+        matchesWildcard: <string>
+        matchesRegEx: <string>
+        matchesJPath: <string>
+        matchesJsonFile: <string>
+        matchesYamlFile: <string>
+    body: <mapping> # optional, for unary calls
+      equalsTo: <scalar | mapping | sequence> # optional
+      contains: <scalar | mapping | sequence> # optional
+      startsWith: <scalar | mapping | sequence> # optional
+      endsWith: <scalar | mapping | sequence> # optional
+      matchesWildcard: <string> # optional
+      matchesRegEx: <string> # optional
+      matchesJPath: <string> # optional
+      matchesJsonFile: <string> # optional
+      matchesYamlFile: <string> # optional
+      ...

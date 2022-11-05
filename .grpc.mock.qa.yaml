@@ -16,28 +16,3 @@ calls:
     header:
       writenum: 1
     status: OK
-- method: GrpcWpfSample.Common.Chat/Write
-  request:
-    body:     
-      matchesJPath: "[?($.content=='test j')]"
-  response:
-    header:
-      writenum: 2
-    status: OK
-- method: GrpcWpfSample.Common.Chat/Write
-  request:
-    body:     
-      content:
-        startsWith: "Hi!"
-        contains: "John"
-      name: "Mike"
-  response:
-    header:
-      writenum: 3
-    status: OK
-- method: GrpcWpfSample.Common.Chat/Write  
-  response:
-    status: NOT_FOUND
-- method: GrpcWpfSample.Common.Chat/GetUser  
-  response:
-    status: OK

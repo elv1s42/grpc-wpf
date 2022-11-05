@@ -5,11 +5,12 @@ protoFile: "/GrpcWpfSample.Common/chat.proto"
 calls:
 - method: Subscribe
   response:
-    streamFromJsonFile: "/res.json"
+    streamFromJsonFile: "/res-new.json"
     status: OK
 - method: Write
   request:
     body:
-      matchesJsonFile: "/req.json"
+      matchesJsonFile: "/req-new.json"
   response:
     status: OK
+    

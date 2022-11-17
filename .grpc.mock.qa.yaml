@@ -15,4 +15,3 @@ calls:
     body:
       Message: Hello Joe!
     status: OK
-	

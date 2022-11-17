@@ -1,19 +1,18 @@
 ---
 fileVersion: v1
-instanceName: Greeter
-protoFile: "/grpc-examples/greeter/greet.proto"
+instanceName: Credentials
+protoFile: "/grpc-examples/credentials/greet.proto"
 calls: 
 - method: demo.Greeter/SayHello
+  credentials:
+  - type: basic-auth
+    user: joe
+    password: "$RSA2048:OXtEk9wNKCFqe8eSGCKLf3RpjN8TVwA2huVMbR2wvd/C7cv38Ee/vkM38+ldzcJr8vfiNnbsknRI9n0O3/S5STQSt9ikj9SypMoemcjej2vFgLsRgrhhNAT3DkLcx9LI3Rqg10S+dbb3MRoUZBfZak4k4pHKdjHWW9n5qkjnzSsPySJ/J0+LGZ7gq/ibYoFvRIddW2R0E0jQcisT4/u+vcQW8xSRggmVeTBei7weVq1zruteL1+8a0FGS7S/P8FT8fWjf3kiF2BDNkPqmm4zBucP36MqjdYIhs4Yx80QBZj0wIe0G53XTSvYRLxHaAxduA37hWbkNYznmpXsJjmxTw=="
+  request:
+    body:
+      Name: Joe
   response:
     body:
-      Message: |-
-        Hello {{ 
-          if date.now.hour > 12
-            "Joe"
-          else
-            "Marta"
-        }}
-
-
+      Message: Hello Joe!
     status: OK
-    
+	

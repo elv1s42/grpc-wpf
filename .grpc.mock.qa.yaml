@@ -1,23 +1,19 @@
 ---
 fileVersion: v1
-instanceName: RoundRobin
-protoFile: "/grpc-examples/round-robin/round-robin.proto"
-calls:
-- method: demo.Counter/IncrementCount
-  scenario:
-    name: DemoRoundRobin
-    requiredState: started
-    newState: run
+instanceName: Greeter
+protoFile: "/grpc-examples/greeter/greet.proto"
+calls: 
+- method: demo.Greeter/SayHello
   response:
     body:
-      count: 1
+      Message: |-
+        Hello {{ 
+          if date.now.hour > 12
+            "Joe"
+          else
+            "Marta"
+        }}
+
+
     status: OK
-- method: demo.Counter/IncrementCount
-  scenario:
-    name: DemoRoundRobin
-    requiredState: run
-    newState: started
-  response:
-    body:
-      count: 2
-    status: OK
+    

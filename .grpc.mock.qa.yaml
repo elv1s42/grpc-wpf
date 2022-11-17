@@ -1,12 +1,16 @@
----
-fileVersion: v1
-serverName: Credentials
-protoFile: "/examples/credentials/greet.proto"
-
-# limit all connections using an IP address white list
-channel:
-  credentials:
-  - type: ip-white-list
-    allowedIps:
-    - 190.152.254.*    # wildcards are supported
-    - 192.188.53.0/24  # CIDR notation is supported
+  request: # optional
+    body: <mapping> # optional, for unary calls
+      equalsTo: <scalar | mapping | sequence> # optional
+      contains: <scalar | mapping | sequence> # optional
+      startsWith: <scalar | mapping | sequence> # optional
+      endsWith: <scalar | mapping | sequence> # optional
+      matchesWildcard: <string> # optional
+      matchesRegEx: <string> # optional
+      matchesJPath: <string> # optional
+      matchesJsonFile: <string> # optional
+      matchesYamlFile: <string> # optional
+      <any-property>: <any-value> # shortcut to equalsTo: <any-value>
+      ...
+      <any-property>:
+        not:
+          <any-operator>

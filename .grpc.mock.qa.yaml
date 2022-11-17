@@ -1,16 +1,23 @@
-  request: # optional
-    body: <mapping> # optional, for unary calls
-      equalsTo: <scalar | mapping | sequence> # optional
-      contains: <scalar | mapping | sequence> # optional
-      startsWith: <scalar | mapping | sequence> # optional
-      endsWith: <scalar | mapping | sequence> # optional
-      matchesWildcard: <string> # optional
-      matchesRegEx: <string> # optional
-      matchesJPath: <string> # optional
-      matchesJsonFile: <string> # optional
-      matchesYamlFile: <string> # optional
-      <any-property>: <any-value> # shortcut to equalsTo: <any-value>
-      ...
-      <any-property>:
-        not:
-          <any-operator>
+---
+fileVersion: v1
+instanceName: RoundRobin
+protoFile: "/grpc-examples/round-robin/round-robin.proto"
+calls:
+- method: demo.Counter/IncrementCount
+  scenario:
+    name: DemoRoundRobin
+    requiredState: started
+    newState: run
+  response:
+    body:
+      count: 1
+    status: OK
+- method: demo.Counter/IncrementCount
+  scenario:
+    name: DemoRoundRobin
+    requiredState: run
+    newState: started
+  response:
+    body:
+      count: 2
+    status: OK

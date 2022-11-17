@@ -1,26 +1,20 @@
-# This is the example of possible request header and body configuration
-- method: <string> # gRPC method name
-  request: # optional
+# This is the example of possible response header and body configuration
+  response: # optional
     header: # optional
-      <arbitrary-key>: <scalar> # same as equalsTo: <scalar>
-      <arbitrary-key>:
-        equalsTo: <scalar>
-        contains: <scalar>
-        startsWith: <scalar>
-        endsWith: <scalar>
-        matchesWildcard: <string>
-        matchesRegEx: <string>
-        matchesJPath: <string>
-        matchesJsonFile: <string>
-        matchesYamlFile: <string>
+      <arbitrary-key>: <scalar>
+    ...
+    trailer: # optional
+      <arbitrary-key>: <scalar>
+    ...
     body: <mapping> # optional, for unary calls
-      equalsTo: <scalar | mapping | sequence> # optional
-      contains: <scalar | mapping | sequence> # optional
-      startsWith: <scalar | mapping | sequence> # optional
-      endsWith: <scalar | mapping | sequence> # optional
-      matchesWildcard: <string> # optional
-      matchesRegEx: <string> # optional
-      matchesJPath: <string> # optional
-      matchesJsonFile: <string> # optional
-      matchesYamlFile: <string> # optional
+      fromJsonFile: <string> # optional
+      fromYamlFile: <string> # optional
       ...
+      <any-property>:
+        fromJsonFile: <string>
+        fromYamlFile: <string>
+      ...
+      <scalar-property>: <scalar>
+      <mapping-property>: <mapping>
+      <sequence-property>: <sequence>
+    ...

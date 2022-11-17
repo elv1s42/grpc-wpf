@@ -1,20 +1,16 @@
-# This is the example of possible response header and body configuration
-  response: # optional
-    header: # optional
-      <arbitrary-key>: <scalar>
-    ...
-    trailer: # optional
-      <arbitrary-key>: <scalar>
-    ...
-    body: <mapping> # optional, for unary calls
-      fromJsonFile: <string> # optional
-      fromYamlFile: <string> # optional
-      ...
-      <any-property>:
-        fromJsonFile: <string>
-        fromYamlFile: <string>
-      ...
-      <scalar-property>: <scalar>
-      <mapping-property>: <mapping>
-      <sequence-property>: <sequence>
-    ...
+---
+fileVersion: v1
+instanceName: PostsUrlPath
+calls:
+- url: /post/{id}
+  method: get
+  response:
+    body:
+      id: "{{ path.id }}"
+      title: "{{ faker.Lorem.Sentence }}"
+      body: "{{ faker.Lorem.Text }}"
+    status: OK
+- url: /post/{id}
+  method: delete
+  response:
+    status: OK
